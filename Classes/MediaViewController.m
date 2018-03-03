@@ -211,7 +211,7 @@
   [_flippingView addSubview: _reflection];
   
   // Transport controls
-  CGFloat verticalPos = _flippingView.frame.origin.y + _backdrop.frame.size.height + 1;
+    CGFloat verticalPos = _flippingView.frame.size.height - 100;
   UIButton *controlButton = [UIButton buttonWithType: UIButtonTypeCustom];
   
   _transportBar = [[UIView alloc] initWithFrame: 
