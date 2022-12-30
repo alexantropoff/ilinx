@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define DEBUG 1
 
 @interface UIView (DebugTracing)
 

@@ -820,7 +820,7 @@ static int g_newSkinState = SKIN_STATE_DONE;
     }
   }
 
-  //**/NSLog( @"custom page %@ initialURL: %@", customPage, initialURL );
+  NSLog( @"custom page %@ initialURL: %@", customPage, initialURL );
   
   // Do we have a cache yet?
   if (g_customPageCache != nil)
@@ -832,7 +832,7 @@ static int g_newSkinState = SKIN_STATE_DONE;
       // Found it
       initialText = (NSString *) item;
 #ifdef DEBUG
-      //**/NSLog( @"cached initial text for custom page %@: %@", customPage, initialText );
+      NSLog( @"cached initial text for custom page %@: %@", customPage, initialText );
 #endif
     }
     else
@@ -862,14 +862,14 @@ static int g_newSkinState = SKIN_STATE_DONE;
       // Read contents of file
       initialText = [NSString stringWithContentsOfFile: filename encoding: NSUTF8StringEncoding error: nil];
 #ifdef DEBUG
-      //**/NSLog( @"local zip initial text for custom page %@: %@", customPage, initialText );
+      NSLog( @"local zip initial text for custom page %@: %@", customPage, initialText );
 #endif
     }
     
     if (initialText == nil)
     {
       // Do it the old way, fetching each page from the remote website	
-      //**/NSLog( @"Fetching %@ from website", customPage );
+      NSLog( @"Fetching %@ from website %@", customPage, initialURL );
 
       NSURLResponse *response = nil;
       NSError *error = nil;
@@ -883,7 +883,7 @@ static int g_newSkinState = SKIN_STATE_DONE;
         (![response isKindOfClass: [NSHTTPURLResponse class]] || [((NSHTTPURLResponse *) response) statusCode] == 200))
         initialText = [[[NSString alloc] initWithData: responseData encoding: NSUTF8StringEncoding] autorelease];
 #ifdef DEBUG
-      //**/NSLog( @"remote initial text for custom page %@: %@", customPage, initialText );
+      NSLog( @"remote initial text for custom page %@: %@", customPage, initialText );
 #endif
     }
 		
