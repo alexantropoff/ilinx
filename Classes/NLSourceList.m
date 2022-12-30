@@ -176,7 +176,7 @@ static NSCharacterSet *HEX_CHARS = nil;
                                            to: _room.renderer.serviceName
                                         every: SOURCE_INFO_REFRESH_INTERVAL];
 #if defined(DEBUG)
-      //**/NSLog( @"Register for sources 1: %@", _menuMsgHandle );
+      NSLog( @"Register for sources 1: %@", _menuMsgHandle );
 #endif
     }
     ++_listContentDelegateCount;
@@ -320,7 +320,7 @@ static NSCharacterSet *HEX_CHARS = nil;
         NSUInteger i;
         NLSource *source;
         
-        //NSLog( @"Current source: %@", currentSourceName );
+        NSLog( @"Current source: %@", currentSourceName );
         _possibleNoSource = NO;
         
         for (i = 0; i < count; ++i)
