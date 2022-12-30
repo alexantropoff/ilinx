@@ -74,7 +74,7 @@ static NSString * const kEnableSkinKey = @"enableSkinKey";
 
   // Create and configure the navigation and view controllers
 #if defined(IPAD_BUILD)
-  [_window addSubview: _rootViewControllerIPad.view];
+  [_window setRootViewController: _rootViewControllerIPad.view];
 #else
   RootViewController *rootViewController = [RootViewController new];
   UINavigationController *aNavigationController = [[MainNavigationController alloc] initWithRootViewController: rootViewController];

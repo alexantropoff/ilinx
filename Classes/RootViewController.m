@@ -310,7 +310,20 @@ static NSString * const kCurrentServiceKey = @"CurrentService";
 {
   if (listDataSource == _roomList)
   {
-    _currentRoom = _roomList.currentRoom;
+      NLRoom *oldRoom=_currentRoom;
+      _currentRoom = _roomList.currentRoom;
+      if(oldRoom!=_currentRoom){
+          if(oldRoom!=nil){
+              [oldRoom.sources removeSourceOnlyDelegate: self];
+              [oldRoom.services removeDelegate: self];
+          }
+          [_currentRoom.sources addSourceOnlyDelegate: self];
+       
+          if (_customPage != nil)
+            [_currentRoom.services addDelegate: self];
+   }
+//
+   
     [self determineFavouritesAsDefaultScreen];
     if (_favouritesController != nil)
       [self handleFavouritesAsDefaultScreenAnimated: NO];
@@ -321,8 +334,8 @@ static NSString * const kCurrentServiceKey = @"CurrentService";
   {
     [self selectService: new animated: YES];
   }
-
-  [_customPage reloadData];
+    [self reloadData];
+  //[_customPage reloadData];
 }
 
 - (void) viewWillAppear: (BOOL) animated
