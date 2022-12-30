@@ -500,7 +500,7 @@
 
     while ((delegate = [enumerator nextObject]))
     {
-      if ([delegate respondsToSelector: @selector(currentItemForListData:changedFrom:to:)])
+        if ([delegate respondsToSelector: @selector(currentItemForListData:changedFrom:to:at:)])
         [delegate currentItemForListData: self changedFrom: oldObject to: newObject at: _currentIndex];
     }
   }
@@ -1038,7 +1038,7 @@
   {
     if ([delegate respondsToSelector: @selector(itemsInsertedInListData:range:)])
       [delegate itemsInsertedInListData: self range: NSMakeRange( 0, 1 )];
-    if ([delegate respondsToSelector: @selector(currentItemForListData:changedFrom:to:)] &&
+      if ([delegate respondsToSelector: @selector(currentItemForListData:changedFrom:to:at:)] &&
         [_roomList count] > 0)
       [delegate currentItemForListData: self changedFrom: previousRoom to: _currentRoom at: _currentIndex];
     if ([delegate respondsToSelector: @selector(listDataRefreshDidEnd:)])
