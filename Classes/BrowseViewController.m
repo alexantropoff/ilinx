@@ -929,7 +929,7 @@ static NSString *kIconOrderPrefsKey = @"BrowseViewIconOrderPrefs";
   
   CGRect oldFrame = _toolBar.frame;
   
-  _toolBar.frame = CGRectMake( oldFrame.origin.x, navBarHeight+10, oldFrame.size.width, oldFrame.size.height );
+  _toolBar.frame = CGRectMake( oldFrame.origin.x, navBarHeight, oldFrame.size.width, oldFrame.size.height );
   
   [_tabBar sizeToFit];
   
