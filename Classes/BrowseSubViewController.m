@@ -169,9 +169,6 @@ static NSMutableSet *g_unavailableURLs = nil;
   [super viewDidAppear: animated];
   [_tableView deselectRowAtIndexPath: [_tableView indexPathForSelectedRow] animated: animated];
     
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewDidDisappear: (BOOL) animated

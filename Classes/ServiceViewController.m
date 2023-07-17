@@ -130,9 +130,6 @@
     _isCurrentView = YES;
   }
     
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation

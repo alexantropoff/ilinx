@@ -423,10 +423,6 @@ static NSString * const kCurrentServiceKey = @"CurrentService";
 
   self.navigationController.navigationBarHidden = [_customPage hidesNavigationBar];
   [super viewWillDisappear: animated];
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  NSLog(@" ------ %f", tmpFram.origin.y);
-  tmpFram.size.height = 5;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewDidAppear: (BOOL) animated
@@ -473,9 +469,6 @@ static NSString * const kCurrentServiceKey = @"CurrentService";
     [profileList release];
     _configStartupType = STARTUP_TYPE_AUTO_DETECT;
   }
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 // Standard table view data source and delegate methods

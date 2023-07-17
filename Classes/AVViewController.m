@@ -102,9 +102,6 @@
   [_roomList.currentRoom.sources removeSourceOnlyDelegate: self];
   [super viewWillDisappear: animated];
     
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 5;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewDidDisappear: (BOOL) animated
@@ -120,9 +117,6 @@
   //**/  NSLog( @"AVViewController viewDidAppear: %@ [%08X]", _source.displayName, (NSUInteger) self );
   [super viewDidAppear: animated];
   
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
   
   // If new source now selected, change view.  If _location is nil, it means
   // that the location has been changed, so no point in checking the source

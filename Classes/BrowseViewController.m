@@ -269,9 +269,6 @@ static NSString *kIconOrderPrefsKey = @"BrowseViewIconOrderPrefs";
     [_moreViewController.tableView deselectRowAtIndexPath:
      [_moreViewController.tableView indexPathForSelectedRow] animated: animated];
   }
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewDidDisappear: (BOOL) animated

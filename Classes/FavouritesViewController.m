@@ -144,9 +144,6 @@
     }
   }
     
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewWillDisappear: (BOOL) animated

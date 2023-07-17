@@ -160,9 +160,6 @@
 - (void) viewDidAppear: (BOOL) animated
 {
   [super viewDidAppear: animated];
-  CGRect tmpFram = self.navigationController.navigationBar.frame;
-  tmpFram.origin.y = 15;
-  self.navigationController.navigationBar.frame = tmpFram;
 
                    
   if (_location != nil && _service != nil)
@@ -177,9 +174,6 @@
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear: animated];
-    CGRect tmpFram = self.navigationController.navigationBar.frame;
-    tmpFram.origin.y = 5;
-    self.navigationController.navigationBar.frame = tmpFram;
 }
 
 - (void) viewDidDisappear: (BOOL) animated
