@@ -8601,7 +8601,6 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "AppStore Release";
@@ -8652,7 +8651,6 @@
 				PRODUCT_NAME = "iLinX HD";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "";
 			};
 			name = Debug;
 		};
@@ -8677,7 +8675,6 @@
 				PRODUCT_NAME = "iLinX HD";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "";
 			};
 			name = Release;
 		};
@@ -8703,7 +8700,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "";
 			};
 			name = "AppStore Release";
 		};
@@ -8732,7 +8728,6 @@
 				PRODUCT_NAME = "iLinX HD Beta";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -8755,7 +8750,6 @@
 				PRODUCT_NAME = "iLinX HD Beta";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -8779,7 +8773,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = arm64;
 			};
 			name = "AppStore Release";
 		};
@@ -8824,7 +8817,6 @@
 				PRODUCT_NAME = iLinX;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -8867,7 +8859,6 @@
 				PRODUCT_NAME = iLinX;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
